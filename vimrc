@@ -1,5 +1,6 @@
 " required
 set nocompatible
+set mouse=a
 
 syntax enable
 
@@ -19,7 +20,7 @@ autocmd BufNewFile,BufRead *.slim set filetype=slim
 autocmd BufNewFile,BufRead Dockerfile* set filetype=dockerfile
 
 " defaults
-colorscheme hybrid " set colorscheme
+silent! colorscheme visualstudio " set colorscheme
 set encoding=utf-8 " set charset encoding
 set number "show line numbers
 set history=1000 " store lots of :cmdline history
