@@ -20,75 +20,20 @@ Give it a try and enjoy :-)
 
 # Installation
 
-**1\. Clone this repo:**
-
+```bash
+cd
+curl -SL https://raw.githubusercontent.com/tiagopog/vimfiles/master/vimrc -o ~/.vimrc
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim -c ":PluginInstall" -c "q" -c "q"
+ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 ```
-cd  /usr/local/etc
-```
-Ps.: if you're on GNU/Linux, you may download it to "/usr/local/src".
-
-```
-git clone https://github.com/tiagopog/vimfiles.git
-```
-
-**2\. Make sure that Vim will find the vimrc file by symlinking it:**
-
-```ln -s /usr/local/etc/vimfiles/vimrc ~/.vimrc```
-
-**3\. Install Vundle:**
-
-```git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
-
 (for more information: https://github.com/gmarik/Vundle.vim)
 
-**4\. Open Vim, press ENTER ignoring the warnings, and install the plugins:**
 
-```
-vim .
-```
+## For vim-colorschemes: 
+- open the .vimrc file and change the coloscheme to any found when you run:
 
-Then enter:
-
-:PluginInstall
-
-**5\. Install and configure some plugin's dependencies:**
-
-5.1. For vim-colorschemes: 
-
-```
-cd ~/.vim
-ln -s bundle/vim-colorschemes/colors colors
+```bash
+ls ~/.vim/colors
 ```
 
-5.2. For ag.vim:
-
-**OS X:**
-
-```brew install the_silver_searcher```
-
-**Ubuntu/Debian:**
-
-```apt-get install silversearcher-ag```
-
-**CentOS:** [try building it from source](https://github.com/ggreer/the_silver_searcher#building-from-source). 
-
-
-5.3. For YouCompleteMe:
-
-```
-$ cd ~/.vim/bundle/YouCompleteMe
-$ ./install.py
-```
-
-5.4. Ruby + RVM:
-
-As Vim loads your shell with `set shell=/bin/sh`, just make sure that your shell's `.profile`
-loads the RVM scripts.
-
-# TODO
-
-* Create (install|update).sh files in order to ease the (installation|updating) process;
-* Create a simple cheatsheet with the main commands for each plugin;
-* Run [vim-test](https://github.com/janko-m/vim-test) coupled with [vim-dispatch](https://github.com/tpope/vim-dispatch);
-* Integrate Vim with [Rubocop](https://github.com/ngmy/vim-rubocop);
-* Integrate Vim with [Reek](https://github.com/rainerborene/vim-reek).
