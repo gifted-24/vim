@@ -6,7 +6,7 @@
 # Installation
 
 ```bash
-curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/main/vim_setup.sh -o ~/vim_setup.sh
+curl -SL https://raw.githubusercontent.com/gifted-24/vim/main/vim_setup.sh -o ~/vim_setup.sh
 chmod +x ~/vim_setup.sh
 bash ~/vim_setup.sh
 rm ~/vim_setup.sh
@@ -26,5 +26,6 @@ vi ~/.vim/colorscheme.txt
 ```bash
 vi ~/.vimrc
 ```
+
 
 
