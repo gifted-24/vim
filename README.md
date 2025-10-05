@@ -27,7 +27,8 @@ chmod +x ~/vim_setup.sh
 mv ~/vim_setup.sh ~/.vim_setup.sh
 ```
 
-* vim-colorschemes: 
+# vim-colorschemes: 
+
 To change the colorscheme of the vim editor:
 - open the `colorscheme.txt` file in  `~/.vim` and choose any of choice
 
