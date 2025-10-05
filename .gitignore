@@ -1,9 +1,0 @@
-tags
-*~
-*.sw*
-.VimballRecord
-undofiles/*
-projects/*
-.netrwhist
-UltiSnips/*
-/bundle/ack.vim/*
