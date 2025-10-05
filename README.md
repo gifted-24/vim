@@ -21,12 +21,12 @@ Give it a try and enjoy :-)
 # Installation
 
 ```bash
-cd && curl -SL https://raw.githubusercontent.com/tiagopog/vimfiles/master/vim_setup.sh
+cd && curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vim_setup.sh -o ./vim_setup.sh
 chmod +x vim_setup.sh && ./vim_setup.sh
 mv ~/vim_setup.sh ~/.vim_setup.sh
 ```
 
-# For vim-colorschemes: 
+*vim-colorschemes: 
 - open the `.vimrc` file and change the coloscheme to any found in `~/.vim/colorscheme.txt`:
 
 ```bash

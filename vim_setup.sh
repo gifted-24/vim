@@ -8,7 +8,7 @@ setup() {
         sudo apt update && sudo apt install vim -y
     fi
     # Downloads the vim config file
-    curl -SL https://raw.githubusercontent.com/tiagopog/vimfiles/master/vimrc -o ~/.vimrc
+    curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vimrc -o ~/.vimrc
     if [[ $? -ne 0 ]]; then
         return 2
     fi
