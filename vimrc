@@ -1,5 +1,6 @@
 " required
 set nocompatible
+set mouse=a
 
 syntax enable
 
