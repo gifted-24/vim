@@ -43,3 +43,5 @@ main() {
     fi
 }
 
+# executes main
+main
