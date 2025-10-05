@@ -35,9 +35,10 @@ gen_colorscheme() {
 main() {
     setup
     if [[ $? -eq 0 ]]; then
-        echo "vim setup -> [Successful]"
+        echo "Generating colorscheme -> [~/.vim/colorscheme.txt]"
         # Generates a `colorscheme.txt` file
         gen_colorscheme
+        echo "vim setup -> [Successful]"
     else
         echo "vim setup -> [Failed]"
     fi
