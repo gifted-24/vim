@@ -30,16 +30,14 @@ mv ~/vim_setup.sh ~/.vim_setup.sh
 # vim-colorschemes: 
 
 To change the colorscheme of the vim editor:
-- open the `colorscheme.txt` file in  `~/.vim` and choose any of choice
+- Open the `colorscheme.txt` file in  `~/.vim` and choose any of choice
 
 ```bash
 vi ~/.vim/colorscheme.txt
 ```
 
-- to change the colorscheme with the one you've picked, open the `~/.vimrc`  
+- Open the `~/.vimrc`. you'll find the colorscheme config on `line 23`. simply replace it, save and exit.
 
 ```bash
 vi ~/.vimrc
 ```
-
-- you'll find the colorscheme config on `line 23`. simply replace it, save and exit.
