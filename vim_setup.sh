@@ -38,7 +38,7 @@ main() {
         echo "vim setup -> [Successful]"
         # Generates a `colorscheme.txt` file
         gen_colorscheme
-    else:
+    else
         echo "vim setup -> [Failed]"
     fi
 }
