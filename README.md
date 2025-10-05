@@ -9,7 +9,7 @@
 curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/main/vim_setup.sh -o ~/vim_setup.sh
 chmod +x ~/vim_setup.sh
 bash ~/vim_setup.sh
-mv ~/vim_setup.sh ~/.vim_setup.sh
+rm ~/vim_setup.sh
 ```
 
 # Colorschemes: 
@@ -26,4 +26,5 @@ vi ~/.vim/colorscheme.txt
 ```bash
 vi ~/.vimrc
 ```
+
 
