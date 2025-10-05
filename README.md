@@ -21,19 +21,15 @@ Give it a try and enjoy :-)
 # Installation
 
 ```bash
-cd
-curl -SL https://raw.githubusercontent.com/tiagopog/vimfiles/master/vimrc -o ~/.vimrc
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim -c ":PluginInstall" -c "q" -c "q"
-ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
+cd && curl -SL https://raw.githubusercontent.com/tiagopog/vimfiles/master/vim_setup.sh
+chmod +x vim_setup.sh && ./vim_setup.sh
+mv ~/vim_setup.sh ~/.vim_setup.sh
 ```
-(for more information: https://github.com/gmarik/Vundle.vim)
 
-
-## For vim-colorschemes: 
-- open the .vimrc file and change the coloscheme to any found when you run:
+# For vim-colorschemes: 
+- open the `.vimrc` file and change the coloscheme to any found in `~/.vim/colorscheme.txt`:
 
 ```bash
-ls ~/.vim/colors
+vi ~/.vim/colorscheme.txt
 ```
 
