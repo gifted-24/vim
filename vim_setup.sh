@@ -19,13 +19,11 @@ setup() {
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     
     # Installs the plugins
-    vim -es -c "PluginInstall" -c "qall"
-    
-    # Provides a colorscheme.txt file
-    gen_colorscheme
+    vim -c "PluginInstall" -c "qall"
 }
 
 gen_colorscheme() {
+    # strips the `.vim` extension from the iterated colorschemes
     for color in ~/.vim/bundle/vim-colorschemes/colors/*.vim; do
         if [[ ! -f "$color" ]]; then
             continue
@@ -34,11 +32,14 @@ gen_colorscheme() {
     done > ~/.vim/colorscheme.txt
 }
 
-# main
-setup
-if [[ $? -eq 0 ]]; then
-    echo "vim setup -> [Successful]"
-else:
-    "vim setup -> [Failed]"
-fi
+main() {
+    setup
+    if [[ $? -eq 0 ]]; then
+        echo "vim setup -> [Successful]"
+        # Generates a `colorscheme.txt` file
+        gen_colorscheme
+    else:
+        echo "vim setup -> [Failed]"
+    fi
+}
 
