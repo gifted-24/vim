@@ -21,15 +21,24 @@ Give it a try and enjoy :-)
 # Installation
 
 ```bash
-cd && curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vim_setup.sh -o ./vim_setup.sh
-chmod +x vim_setup.sh && ./vim_setup.sh
+curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vim_setup.sh -o ~/vim_setup.sh
+chmod +x ~/vim_setup.sh
+./vim_setup.sh
 mv ~/vim_setup.sh ~/.vim_setup.sh
 ```
 
-*vim-colorschemes: 
-- open the `.vimrc` file and change the coloscheme to any found in `~/.vim/colorscheme.txt`:
+* vim-colorschemes: 
+To change the colorscheme of the vim editor:
+- open the `colorscheme.txt` file in  `~/.vim` and choose any of choice
 
 ```bash
 vi ~/.vim/colorscheme.txt
 ```
 
+- to change the colorscheme with the one you've picked, open the `~/.vimrc`  
+
+```bash
+vi ~/.vimrc
+```
+
+- you'll find the colorscheme config on `line 23`. simply replace it, save and exit.

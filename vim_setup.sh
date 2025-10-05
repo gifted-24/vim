@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
 
 setup() {
-    # Navigates to `HOME Directory` to increase success rate
-    cd || { echo "could not navigate to HOME Directory" >&2; return 2; }
-    # Installs the `vim editor` if it doesn't exist
+    # Installs `vim editor` if it doesn't exist
     if [[ -z "$(which vim)" ]]; then
         sudo apt update && sudo apt install vim -y
     fi
+    
     # Downloads the vim config file
-    curl -SL https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vimrc -o ~/.vimrc
+    local vim_file="https://raw.githubusercontent.com/gifted-24/vim_editor/simplify-setup/vimrc -o ~/.vimrc"
+    curl -SL "$vim_file"
+    
+    # confirms if the `vim_file` file was successfully downloaded before proceeding 
     if [[ $? -ne 0 ]]; then
-        return 2
+        echo "VimDownloadError: [$vim_file]" return 2
     fi
+    
     # Clones Vundle.vim
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    
     # Installs the plugins
-    vim -c "PluginInstall" -c "qall"
+    vim -es -c "PluginInstall" -c "qall"
     
     # Provides a colorscheme.txt file
     gen_colorscheme
@@ -27,9 +31,14 @@ gen_colorscheme() {
             continue
         fi
         basename "$color" .vim
-    done | column -c 60 -x > ~/.vim/colorscheme.txt
+    done > ~/.vim/colorscheme.txt
 }
 
 # main
-setup && echo "vim setup -> [successful]"
+setup
+if [[ $? -eq 0 ]]; then
+    echo "vim setup -> [Successful]"
+else:
+    "vim setup -> [Failed]"
+fi
 
