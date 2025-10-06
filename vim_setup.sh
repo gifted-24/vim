@@ -7,7 +7,7 @@ setup() {
     fi
     
     # Downloads the vim config file
-    local vim_file="https://raw.githubusercontent.com/gifted-24/vim_editor/main/vimrc"
+    local vim_file="https://raw.githubusercontent.com/gifted-24/vim/main/vimrc"
     curl -SL "$vim_file" -o  ~/.vimrc
     
     # confirms if the `vim_file` file was successfully downloaded before proceeding 
